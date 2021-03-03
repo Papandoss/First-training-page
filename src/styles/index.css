@@ -1,6 +1,11 @@
+@media (min-width: 1025px) {
+  header {
+    width: 60px;
+  }
+}
+
 body {
-  color: slateblue;
-  font-family: sans-serif;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=index.css.map */

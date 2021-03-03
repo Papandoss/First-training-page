@@ -1,1 +1,12 @@
-@import "new";
+$rem-base: 14px;
+@function rem($size) {
+  @return $size / $rem-base * 1rem;
+}
+
+@import "media.scss";
+@import "header.scss";
+
+body{
+  font-size: $rem-base;
+}
+

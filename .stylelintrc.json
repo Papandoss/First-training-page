@@ -1,3 +1,25 @@
 {
-  "extends": "stylelint-config-standard"
+  "extends": "stylelint-config-recommended-scss",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "include",
+        "mixin",
+        "extend",
+        "if",
+        "each",
+        "content",
+        "function",
+        "for",
+        "return",
+        "error",
+        "else"
+      ]
+    }],
+    "no-descending-specificity": null,
+    "declaration-block-no-shorthand-property-overrides": null
+  }
 }
