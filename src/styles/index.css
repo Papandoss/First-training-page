@@ -1,11 +1,17 @@
+html {
+  font-size: 14px;
+}
+
 @media (min-width: 1025px) {
   header {
-    width: 60px;
+    width: span(4 of 12);
   }
 }
 
 body {
-  font-size: 14px;
+  width: 71.4285714286rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*# sourceMappingURL=index.css.map */

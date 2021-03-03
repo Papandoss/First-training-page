@@ -1,12 +1,16 @@
 $rem-base: 14px;
+html{
+  font-size: $rem-base;
+}
 @function rem($size) {
-  @return $size / $rem-base * 1rem;
+  @return ($size / $rem-base)* 1rem;
 }
 
 @import "media.scss";
 @import "header.scss";
 
 body{
-  font-size: $rem-base;
+  width: rem(1000px);
+  margin-right: auto;
+  margin-left: auto;
 }
-
