@@ -1,6 +1,6 @@
 @mixin phone{
-  @media (max-width: 676px) { @content; }
-}
+  @media (max-width: 676px) { @content;
+}}
 
 @mixin tablet{
   @media (min-width: 677px) { @content; }
@@ -8,4 +8,13 @@
 
 @mixin desktop{
   @media (min-width: 1025px) { @content; }
+}
+
+@if (screen == tablet) {
+  $rem-base: 14px;
+  $width : 500px;
+}
+@else if (screen == phone) {
+  $rem-base: 12px;
+  $width : 200px;
 }

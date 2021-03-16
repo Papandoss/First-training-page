@@ -1,16 +1,66 @@
-$rem-base: 14px;
-html{
-  font-size: $rem-base;
-}
-@function rem($size) {
-  @return ($size / $rem-base)* 1rem;
-}
+$rem-base: 16px;
+$width : 1000px;
 
 @import "media.scss";
+@import "value.scss";
+@import "node_modules/susy/sass/susy";
+@import "node_modules/susy/sass/plugins/svg-grid";
+@import "grid.scss";
 @import "header.scss";
+@import "navig.scss";
+@import "main.scss";
+@import "footer.scss";
+
+
+///absolute padding////
+.pd20{
+  padding-left: rem(20px);
+  padding-right: rem(20px);
+}
+////
 
 body{
-  width: rem(1000px);
+  @include desktop{
+    width: $width;
+    }
+  @include tablet {
+    min-width: $width/2;
+    }
+  @include phone {
+    min-width: $width/5;
+    }
   margin-right: auto;
   margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+  @include desktop{
+    width: rem(1000px);
+  }
+}
+
+
+a{
+  text-decoration: none;
+}
+
+
+ul{padding: 0;}
+
+button{cursor: pointer}
+
+.btn{
+  border: 0;
+  background-color: $blue;
+  color: white;
+  border-radius: rem(5px);
+  height: rem(30px);
+}
+
+.text{
+  font-size: rem(12px);
+  margin-top: rem(5px);
+  color: gray;
 }

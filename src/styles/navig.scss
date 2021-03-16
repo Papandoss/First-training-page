@@ -1,0 +1,70 @@
+
+.nav__menu{
+  ul{
+    border-bottom-color: $gray-light;
+    border-bottom-width: rem(5px);
+    border-bottom-style: solid;
+    padding-bottom: rem(20px);
+
+    margin-bottom: 0;
+    @include phone{
+      display: none;
+    }
+  }
+  li{
+    display: inline;
+ 
+    @include tablet{
+      margin-right: rem(5px);
+      a{
+        color: black;
+        font-size: rem(12px);
+      }
+    }
+    @include desktop {
+      margin-right: rem(20px);
+      a {
+        color: black;
+        font-size: $rem-base;
+      }
+    }
+  }
+}
+
+.nav-mob{
+
+  li{
+    display: block;
+    margin-left: rem(10px);
+    margin-bottom: rem(10px);
+  }
+
+  position: absolute;
+  top: rem(169px);
+  background-color: rgb(20, 12, 12);
+  a{color: white;}
+  width: rem(180px);
+}
+
+.nav__text{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include phone{
+    flex-direction: column;
+
+  }
+
+}
+
+.nav__text__search{
+  background-color: $gray;
+  border: 0;
+  border-radius: rem(5px);
+  height: rem(30px);
+  @include phone{
+    margin-top: rem(10px) ;
+  }
+}
+
+

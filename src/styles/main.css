@@ -1,0 +1,11 @@
+.main__content1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__content1__block1 {
+  width: 350px;
+}
+
+/*# sourceMappingURL=main.css.map */

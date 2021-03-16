@@ -1,0 +1,14 @@
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__item {
+  width: span(1);
+  margin-right: gutter();
+}
+.footer__item:last-child {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=footer.css.map */

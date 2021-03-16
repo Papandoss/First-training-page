@@ -1,0 +1,14 @@
+nav a {
+  color: black;
+}
+nav li {
+  display: inline;
+  margin-right: 5px;
+}
+nav span {
+  color: gray;
+  height: 3px;
+  width: 40px;
+}
+
+/*# sourceMappingURL=navig.css.map */
