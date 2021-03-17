@@ -34,9 +34,14 @@ footer{
     height: rem(20px);
     border-bottom: rem(1px) solid $light-black;
   }
-  h5{
+  h2{
+    font-size: rem(14px);
+    text-transform: uppercase;
+  }
+  h3{
     color: gray;
     margin: 0;
+    font-size: rem(12px);
   }
 
 }
@@ -91,4 +96,7 @@ footer{
   display: flex;
   justify-content: space-between;
   background-color: $light-black;
+  @include phone{
+    flex-direction: column;
+  }
 }

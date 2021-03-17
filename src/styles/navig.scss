@@ -19,6 +19,7 @@
       a{
         color: black;
         font-size: rem(12px);
+        text-transform: uppercase;
       }
     }
     @include desktop {
@@ -26,6 +27,7 @@
       a {
         color: black;
         font-size: $rem-base;
+        text-transform: uppercase;
       }
     }
   }
@@ -42,7 +44,10 @@
   position: absolute;
   top: rem(169px);
   background-color: rgb(20, 12, 12);
-  a{color: white;}
+  a{
+    color: white;
+    text-transform: uppercase;
+  }
   width: rem(180px);
 }
 

@@ -25,11 +25,13 @@ function showMenu() {
   if (mediaPhone.matches) {
     for (let element of pd20List) {
       element.classList.remove("pd20");
+      element.classList.add("pd10");
     }
     block1.classList.add("mg40");
   } else {
     for (let element of pd20List) {
       element.classList.add("pd20");
+      element.classList.remove("pd10");
     }
     block1.classList.remove("mg40");
     menu.classList.add("menu");
