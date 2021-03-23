@@ -1,102 +1,119 @@
-footer{
-  background-color: #1e1e1e;
+footer {
+  background-color: $bg-dark;
 }
 
-.footer__wrapper{
+.footer-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.footer__item{
+.footer__item {
   margin-right: gutter();
-  @include tablet{
+
+  @include phone {
+    width: span(4);
+  }
+  @include tablet {
     width: span(2);
-    margin-right: gutter();
-    &:nth-child(2n){
-      width: span(2);
+
+    &:nth-child(2n) {
       margin-right: 0;
     }
   }
-  @include phone{
-    width: span(4);
-  }
-  @include desktop{
+  @include desktop {
     width: span(1);
-    &:nth-child(2n){
-      width: span(1);
+
+    &:last-child {
+      margin-right: 0;
     }
-  &:last-child {
-    margin-right: 0
   }
-  }
-  li{
-    list-style-type: none;
+
+  li {
     height: rem(20px);
+
+    list-style-type: none;
+
     border-bottom: rem(1px) solid $light-black;
   }
-  h2{
+
+  h2 {
     font-size: rem(14px);
     text-transform: uppercase;
   }
-  h3{
-    color: gray;
+
+  h3 {
     margin: 0;
+
     font-size: rem(12px);
+
+    color: gray;
   }
-
 }
 
-.footer__input{
-  background-color: $light-black;
+.footer-input {
   width: 100%;
-  border: 0;
+
   margin-bottom: rem(10px);
-  border-radius: rem(5px);
+  padding-left: rem(10px);
+
   color: white;
-  padding: 0;
+  background-color: $light-black;
+
+  border: 0;
+  border-radius: rem(5px);
 }
 
-.h20{
-  height: rem(20px);
-}
-
-.h100{
-  height: rem(90px);
-}
-
-.footer__link{
+.footer-link {
   font-size: rem(12px);
+
   color: $blue;
 }
 
-.left{
+.to-right {
   float: right;
 }
 
-.footer__item__title{
+.footer__item-title {
   font-size: rem(14px);
+
   color: white;
 }
 
-.blog-description{
+.blog-description {
   margin: 0;
+
   font-size: rem(10px);
+
   color: gray;
 }
 
-.footer__submit{
+.footer-submit {
+  height: rem(30px);
+
   background-color: $blue;
   color: white;
-  height: rem(30px);
+
   border: 0;
   border-radius: rem(5px);
 }
 
-.footer__copyright{
+.footer-copyright {
   display: flex;
   justify-content: space-between;
+
   background-color: $light-black;
-  @include phone{
+
+  @include phone {
     flex-direction: column;
   }
+}
+
+/////size inputs////
+
+.h20 {
+  height: rem(20px);
+}
+
+.h100 {
+  height: rem(90px);
 }

@@ -1,106 +1,144 @@
-
-.main__content1{
-  @include phone{flex-direction: column}
+.container-1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   background-color: $gray;
+
   border-top: rem(5px) solid;
   border-bottom: rem(5px) solid;
   border-color: $gray-light;
+
+  @include phone {
+    flex-direction: column;
+  }
 }
 
-
-.main__content1__block{
-  @include desktop{width: rem(350px);}
-  @include tablet{min-width: rem(250px);}
-  @include phone{min-width: rem(200px);}
+.fade {
+  @include phone {
+    width: rem(200px);
+  }
+  @include tablet {
+    width: rem(350px);
+  }
+  @include desktop {
+    width: rem(550px);
+  }
 }
 
-.main__content2{
+.container-1__item {
+  @include desktop {
+    width: rem(350px);
+  }
+  @include tablet {
+    min-width: rem(250px);
+  }
+  @include phone {
+    min-width: rem(200px);
+  }
+}
+
+.container-2 {
   display: flex;
   flex-wrap: wrap;
 }
 
-.main__content2__items{
+.container-2__items {
   display: flex;
   flex-wrap: wrap;
+
   width: span(2);
 
-  @include phone{
-    width: span(4)
+  @include phone {
+    width: span(4);
   }
 
-  section{
+  section {
+    width: span(2);
 
-    &:nth-child(2n){
-      width: span(2);
-      margin-right: 0;
-    }
-    &:nth-child(2n+1){
-      width: span(2);
-      margin-right: gutter();
-    }
-    @include phone{
-      width: span(4)
-    }
     text-align: center;
-    h3{
-      color: $blue;
+
+    h3 {
       margin: 0;
       margin-bottom: rem(20px);
+
+      color: $blue;
+    }
+
+    @include phone {
+      width: span(4);
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-child(2n + 1) {
+      margin-right: gutter();
+      @include phone {
+        margin-right: 0;
+      }
     }
   }
 }
 
-.main__content2__picture{
+.container-2__picture {
+  display: flex;
+  justify-content: center;
+
   width: span(2);
   margin-right: gutter();
-  @include phone{
+
+  @include phone {
     width: span(4);
-    margin-right:0;
+    margin-right: 0;
     margin-bottom: rem(20px);
   }
-  img{
+
+  img {
     width: 100%;
     max-width: rem(505px);
   }
-  display: flex;
-  justify-content: center;
 }
 
-.main__content3{
+.container-3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-left: rem(10px) solid $blue;
-  background-color: #e0e0e0;
+
   margin-left: rem(20px);
   margin-right: rem(20px);
-  @include phone{flex-direction: column;
+
+  background-color: $light-white;
+
+  border-left: rem(10px) solid $blue;
+
+
+  @include phone {
+    flex-direction: column;
+
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-.main__content3__block{
+.container-3__item {
   margin: rem(30px);
-  h2{margin: 0;}
-  p{margin: 0;}
+
+  h2,p {
+    margin: 0;
+  }
 }
 
-.main__content3__btn{
-  margin: rem(30px);
+.container-3__btn {
   height: rem(57px);
-  font-size: rem(16px);
-  border: 0;
-  border-radius: rem(10px);
+  margin: rem(30px);
+
   background-color: $blue;
   color: white;
-}
 
-.fade {
-  @include phone{width: rem(200px);}
-  @include tablet{width: rem(350px);}
-  @include desktop{width: rem(550px);}
+  font-size: rem(16px);
+
+  border: 0;
+  border-radius: rem(10px);
+
 }

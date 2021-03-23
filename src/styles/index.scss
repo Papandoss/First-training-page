@@ -1,5 +1,5 @@
 $rem-base: 16px;
-$width : 1000px;
+$width: 1000px;
 
 @import "media.scss";
 @import "value.scss";
@@ -7,64 +7,63 @@ $width : 1000px;
 @import "node_modules/susy/sass/plugins/svg-grid";
 @import "grid.scss";
 @import "header.scss";
-@import "navig.scss";
 @import "main.scss";
 @import "footer.scss";
 
-
-///absolute padding////
-.pd20{
-  padding-left: rem(20px);
-  padding-right: rem(20px);
-}
-.pd10{
-  padding-left: rem(10px);
-  padding-right: rem(10px);
-}
-////
-
 body{
-  @include desktop{
-    width: $width;
-    }
-  @include tablet {
-    min-width: $width/2;
-    }
-  @include phone {
-    min-width: $width/5;
-    }
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: white;
-  font-family: 'Roboto', sans-serif;
-  color: #333333;
-  @include desktop{
-    width: rem(1000px);
-  }
+margin: 0;
 }
 
-
-a{
+/////items-decoration/////
+a {
   text-decoration: none;
 }
 
-
-ul{padding: 0;}
-
-button{cursor: pointer}
-
-.btn{
-  border: 0;
-  background-color: $blue;
-  color: white;
-  border-radius: rem(5px);
-  height: rem(30px);
+ul {
+  padding: 0;
 }
 
-.text{
-  font-size: rem(12px);
+button {
+  cursor: pointer;
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+///////////////
+
+.wrapper {
+  margin: 0 auto;
+
+  font-family: "Roboto", sans-serif;
+
+  background-color: white;
+
+  @include desktop {
+    width: $width;
+  }
+  @include tablet {
+    min-width: $width/2;
+  }
+  @include phone {
+    min-width: $width/5;
+  }
+}
+
+.btn {
+  height: rem(30px);
+
+  border: 0;
+  border-radius: rem(5px);
+
+  background-color: $blue;
+  color: white;
+}
+
+.text {
   margin-top: rem(5px);
+
+  font-size: rem(12px);
+
   color: gray;
 }

@@ -1,43 +1,35 @@
-import '../styles/index.scss';
+import "../styles/index.scss";
 
-if (process.env.NODE_ENV === 'development') {
-  require('../index.html');
+if (process.env.NODE_ENV === "development") {
+  require("../index.html");
 }
 
-let btnMenu = document.querySelector(".btn-menu");
+let btnMenu = document.querySelector(".btn-menu-1");
 let btnArrow = document.querySelector(".down");
-let menu = document.querySelector(".menu");
-let nav = document.querySelector(".nav__menu");
-let block1 = document.querySelector(".main__content1__block");
+let menu1 = document.querySelector(".menu-1");
+let menu2 = document.querySelector(".menu-2");
+let block1 = document.querySelector(".container-1__item");
 let pd20List = document.querySelectorAll(".pd20");
 const mediaPhone = window.matchMedia("(max-width: 676px)");
 
 btnMenu.onclick = function () {
   btnArrow.classList.toggle("down");
   btnArrow.classList.toggle("up");
-  menu.classList.toggle("menu");
-  menu.classList.toggle("menu-mob");
-  nav.classList.toggle("nav__menu");
-  nav.classList.toggle("nav-mob");
+  menu1.classList.toggle("menu-1");
+  menu1.classList.toggle("menu-1-mob");
+  menu2.classList.toggle("menu-2");
+  menu2.classList.toggle("menu-2-mob");
 };
 
 function showMenu() {
   if (mediaPhone.matches) {
-    for (let element of pd20List) {
-      element.classList.remove("pd20");
-      element.classList.add("pd10");
-    }
     block1.classList.add("mg40");
   } else {
-    for (let element of pd20List) {
-      element.classList.add("pd20");
-      element.classList.remove("pd10");
-    }
     block1.classList.remove("mg40");
-    menu.classList.add("menu");
-    menu.classList.remove("menu-mob");
-    nav.classList.add("nav__menu");
-    nav.classList.remove("nav-mob");
+    menu1.classList.add("menu-1");
+    menu1.classList.remove("menu-1-mob");
+    menu2.classList.add("menu-2");
+    menu2.classList.remove("menu-2-mob");
   }
 }
 
@@ -53,7 +45,7 @@ $(".fade").slick({
   autoplaySpeed: 2000,
   speed: 500,
   fade: true,
-  cssEase: "linear"
+  cssEase: "linear",
 });
 
-console.log('webpack starterkit');
+console.log("webpack starterkit");

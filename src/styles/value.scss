@@ -1,5 +1,11 @@
+///////function return sizes in rem////
 @function rem($size) {
-  @return ($size / $rem-base)* 1rem;
+  @return ($size / $rem-base) * 1rem;
+}
+//////////////////////////////////////
+html {
+  font-size: $rem-base;
+  background-color: gray;
 }
 
 ////colors/////
@@ -7,21 +13,26 @@ $gray-light: #e9e9e9;
 $gray: #f1f1f1;
 $blue: #0099ff;
 $light-black: #2e2e2e;
+$light-white: #e0e0e0;
+$dark: rgb(20, 12, 12);
+$bg-dark: #1e1e1e;
+//////////////////
 
-
-html{
-  font-size: $rem-base;
-  background-color: gray;
+///////margins/////////
+.mg40 {
+  margin-bottom: rem(40px);
 }
 
-.mg40{
-margin-bottom: rem(40px);
-}
-
-.mg45{
+.mg45 {
   margin-bottom: rem(45px);
 }
 
-.mg15{
+.mg15 {
   margin-bottom: rem(15px);
 }
+////////paddings////////
+.pd20 {
+  padding-left: rem(20px);
+  padding-right: rem(20px);
+}
+

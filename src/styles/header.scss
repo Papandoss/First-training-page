@@ -1,97 +1,217 @@
-.menu{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: rem(40px);
-
-  li{
-    display: inline;
-    list-style-type: none;
-  }
-  @include phone{
-    display: none;
-  }
-}
-
-header{
+////header-items////
+header {
   background-color: $light-black;
 }
 
-ul{padding: 0;margin: 0;}
+ul {
+  padding: 0;
+  margin: 0;
+}
+///////////////////
 
+.menu-1 {
+  height: rem(40px);
 
-.menu__items{
-  a{
-    color: $gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include phone {
+    display: none;
   }
-  span{
 
-      margin-left: rem(5px);
-      margin-right: rem(5px);
-      border-left: rem(2px) solid grey;
-
+  li {
+    display: inline;
+    list-style-type: none;
   }
-  @include phone{ :first-child{margin-top: 10px;}
-    li{
-      margin-bottom: 10px;
+}
+
+.menu-1__items {
+  ul {
+    :first-child {
+      border: 0;
     }
   }
+
+  li {
+    padding: 0 rem(5px);
+
+    border-left: rem(2px) solid grey;
+
+    a {
+      color: $gray;
+    }
+  }
+
+  @include phone {
+      ul{
+        :first-child {
+          margin-top: rem(10px);
+        }
+      }
+      li {
+        margin-bottom: rem(10px);
+
+        border: 0;
+      }
+  }
 }
 
-
-.menu-mob{
-  flex-direction: column;
-  position: absolute;
-  top: rem(40px);
-  height: rem(130px);
-  background-color: rgb(20, 12, 12);
-  width: rem(180px);
-  li{display: block;
-    margin-left: rem(10px);
-    margin-bottom: rem(5px);
-    a{color: white;}
-  }
-  span{
-    border: 0;
-  }
-}
-.menu__social{
-  li{margin-left: rem(10px);
-  }
-  @include phone{
-    margin-left: rem(10px);
-    margin-right: auto;
+.menu-1__social {
+  @include phone {
     position: absolute;
     top: rem(10px);
     right: rem(10px);
 
+    margin-left: rem(10px);
+    margin-right: auto;
+  }
+  li {
+    margin-left: rem(10px);
   }
 }
 
-.btn-menu{
-  display: none;
-  @include phone{
+.menu-1-mob {
+  position: absolute;
+  top: rem(40px);
+
+  height: rem(130px);
+  width: rem(180px);
+
+  flex-direction: column;
+
+  background-color: $dark;
+
+  li {
     display: block;
+
+    margin-left: rem(10px);
+    margin-bottom: rem(5px);
+    a {
+      color: white;
+    }
+  }
+  span {
+    border: 0;
+  }
+}
+
+.menu-2 {
+  ul {
+    padding-bottom: rem(20px);
+    margin-bottom: 0;
+
+    border-bottom-color: $gray-light;
+    border-bottom-width: rem(5px);
+    border-bottom-style: solid;
+
+    @include phone {
+      display: none;
+    }
+  }
+  li {
+    display: inline;
+
+    @include tablet {
+      margin-right: rem(5px);
+
+      a {
+        text-transform: uppercase;
+        font-size: rem(12px);
+
+        color: black;
+      }
+    }
+    @include desktop {
+      margin-right: rem(20px);
+      a {
+        font-size: $rem-base;
+        text-transform: uppercase;
+
+        color: black;
+      }
+    }
+  }
+}
+
+.menu-2-mob {
+  position: absolute;
+  top: rem(170px);
+
+  width: rem(180px);
+
+  background-color: rgb(20, 12, 12);
+
+  li {
+    display: block;
+
+    margin-left: rem(10px);
+    margin-bottom: rem(10px);
+  }
+  a {
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+.menu-2-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include phone {
+    flex-direction: column;
+  }
+}
+
+.menu-2-search {
+  height: rem(30px);
+
+  padding-left: rem(10px);
+
+  border: 0;
+  border-radius: rem(5px);
+
+  background-color: $gray;
+
+  @include phone {
+    margin-top: rem(10px);
+  }
+}
+
+////phone-button and decoration arrows/////
+
+.btn-menu-1 {
+  display: none;
+
+  @include phone {
+    display: block;
+
     width: 40px;
     height: 40px;
+
     padding: 0;
+
     background-color: transparent;
     outline: none;
     border: 0;
+
     i {
-      border: solid white;
-      border-width: 0 3px 3px 0;
       display: inline-block;
+
       padding: 5px;
+
+      border: solid white;
+      border-width: 0 rem(3px) rem(3px) 0;
     }
-
   }
-
 }
 
 .down {
   transform: rotate(45deg);
 }
+
 .up {
   transform: rotate(-135deg);
 }
+//////////////////////
